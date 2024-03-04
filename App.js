@@ -13,11 +13,17 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={Home}/>
-        <Stack.Screen name="Destination" component={Destination}/>
-        <Stack.Screen name="reco" component={RecommondedPlaces}/>
-        <Stack.Screen name="startinfo" component={StartingPoint}/>
-        <Stack.Screen name="planshower" component={Planshower}/>
+        <Stack.Screen name="Home" options={{title:"",headerShown:false}} component={Home}/>
+        <Stack.Screen options={{title:"",headerStyle: {
+            backgroundColor: 'white',
+            shadowOpacity: 0,
+            borderWidth: 0,
+            shadowColor: 'white',
+            elevation: 0,
+          }}}name="Destination" component={Destination}/>
+        <Stack.Screen name="reco" options={{title:"Near By Places"}} component={RecommondedPlaces}/>
+        <Stack.Screen name="startinfo" options={{title:""}} component={StartingPoint}/>
+        <Stack.Screen name="planshower" options={{title:"Travel Plan"}} component={Planshower}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -42,7 +42,7 @@ const Destination = ({navigation}) => {
           }}
       />
       </View>
-      <View className="w-full  border-2 border-red-200 flex flex-col justify-center items-center z-10">
+      <View className="w-full   flex flex-col justify-center items-center z-10">
       <Image
         source={require('../assets/Trip.gif')}
         className=""

@@ -3,14 +3,14 @@ import { View, Text, Image, Button, TouchableOpacity } from 'react-native';
 
 const Home = ({ navigation }) => {
   return (
-    <View className="flex w-full bg-white flex-col justify-around place-items-center ">
-        <View className="w-full mt-20 border-2 border-red-200 flex flex-col justify-center items-center">
+    <View className="flex w-full h-full bg-white flex-col justify-around items-center ">
+        <View className="w-full mt-20 mb-20  flex flex-col justify-center ">
       <Image
-        source={require('../assets/logo.png')}
+        source={require('../assets/logonew.png')}
         // className="w-screen"
         style={{
-            width:"68%",
-            height:"51%"
+            width:"100%",
+            height:"55%"
         }}
       />
       </View>

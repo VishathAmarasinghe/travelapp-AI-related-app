@@ -1,6 +1,6 @@
 import { useRoute } from "@react-navigation/native";
 import React, { useEffect, useState } from "react";
-import { View, Button, DatePickerAndroid, Text, TouchableOpacity } from "react-native";
+import { View, Button, DatePickerAndroid, Text, TouchableOpacity,Image } from "react-native";
 import DateTimePicker from '@react-native-community/datetimepicker';
 
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
@@ -47,7 +47,7 @@ const StartingPoint = ({ navigation }) => {
   return (
     <View className="flex-1 bg-white p-4">
       <Text className="font-bold text-lg mt-3">
-            Select Your Desired Location
+            Select your desired starting location
         </Text>
         <View className="h-32 z-40 relative ">
 
@@ -55,7 +55,7 @@ const StartingPoint = ({ navigation }) => {
       <GooglePlacesAutocomplete
         placeholder='Search'
         // onPress={handlePlaceSelect} 
-        onPress={(data)=>setSelectedLocation(data.description)}
+        onPress={(data)=>setLocation(data.description)}
         query={{
           key: 'AIzaSyBaDVwvh1ksOKMAb_s2QBEadlGsbc4A43k',
           language: 'en',
@@ -78,8 +78,22 @@ const StartingPoint = ({ navigation }) => {
           }}
       />
       </View>
-      <Text>{startDate}</Text>
-      <Button title="Date" onPress={showDatepicker}/>
+      <View className="w-full mt-20  flex flex-col justify-center items-center">
+      <Image
+        source={require('../assets/trip3.gif')}
+        // className="w-screen"
+        style={{
+            width:"68%",
+            height:"51%"
+        }}
+      />
+      </View>
+      <Text className="text-[15px] text-center">{startDate}</Text>
+      <TouchableOpacity title="Date" className="w-[90%] m-3 bg-[#276b1c] flex flex-col justify-center items-center p-3 rounded-xl" onPress={showDatepicker}>
+      <Text className="text-xl text-white font-semibold">
+            Date
+        </Text>
+      </TouchableOpacity>
       {show && (
         <DateTimePicker
           testID="dateTimePicker"
@@ -89,8 +103,8 @@ const StartingPoint = ({ navigation }) => {
           onChange={onChange}
         />
       )}
-      <TouchableOpacity  title="Next" onPress={proceedCreation} >
-        <Text>
+      <TouchableOpacity className="w-[90%] m-3 bg-[#276b1c] flex flex-col justify-center items-center p-3 rounded-xl" title="Next" onPress={proceedCreation} >
+        <Text className="text-xl text-white font-semibold">
             Continue
         </Text>
       </TouchableOpacity>

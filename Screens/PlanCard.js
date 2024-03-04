@@ -25,7 +25,7 @@ const PlanCard = ({ item }) => {
     <View className="bg-white shadow-2xl rounded-2xl p-4 m-2">
       <View className="flex flex-row justify-between  w-full">
         <View className="flex flex-row justify-start items-center w-1/2">
-          <AntDesign name="star" size={24} color="purple" />
+          <AntDesign name="star" size={24} color="#276b1c" />
           <View className="flex flex-col ml-1">
             <Text className="font-bold text-[17px] text-gray-600">From</Text>
             <Text className="font-bold text-[14px]">
@@ -34,7 +34,7 @@ const PlanCard = ({ item }) => {
           </View>
         </View>
         <View className="flex flex-row justify-start items-center w-1/2">
-          <AntDesign name="star" size={24} color="purple" />
+          <AntDesign name="star" size={24} color="#276b1c" />
           <View className="flex flex-col ml-1">
             <Text className="font-bold text-[17px] text-gray-600">TO</Text>
             <Text className="font-bold text-[14px]">{item.end_loc}</Text>
@@ -46,12 +46,12 @@ const PlanCard = ({ item }) => {
           <MaterialCommunityIcons
             name="map-marker-distance"
             size={28}
-            color="purple"
+            color="#276b1c"
           />
           <Text className="font-bold text-[14px] ml-1">{item.distance} km</Text>
         </View>
         <View className="flex flex-row justify-start items-center my-3 w-1/2">
-        <Feather name="clock" size={24} color="purple" />
+        <Feather name="clock" size={24} color="#276b1c" />
           <Text className="font-bold text-[14px] ml-1">{parseFloat(item.duration).toFixed(2)} Hours</Text>
         </View>
       </View>
